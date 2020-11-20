@@ -1,8 +1,9 @@
 import sys
 from PyQt5 import uic
-from PyQt5.QtGui import QPainter, QColor
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QPainter
 from PyQt5.QtWidgets import QWidget, QApplication
-from random import random, randrange
+from random import random
 
 
 class Window(QWidget):
@@ -21,11 +22,10 @@ class Window(QWidget):
             d, x, y = round(random() * self.width()), round(random() * self.width() / 2), round(
                 random() * self.width() / 2)
             l = [x, y, d, d]
-            color = QColor(randrange(256), randrange(256), randrange(256))
             qp = QPainter()
             qp.begin(self)
 
-            qp.setBrush(color)
+            qp.setBrush(Qt.yellow)
             qp.drawEllipse(*l)
 
             qp.end()
