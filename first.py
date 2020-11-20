@@ -1,2 +1,6 @@
 print('My first git-repo')
 print('упражняемся в коммитах')
+print('My first git program')
+print('And I change it every day')
+print('Again')
+print('UFO came and added this line')
